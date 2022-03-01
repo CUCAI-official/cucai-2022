@@ -223,6 +223,15 @@ a {
   background-color: #003c58;
 }
 
+.button.on-white.coming-soon {
+  background-color: #6b6b6b;
+  color: #fff;
+}
+
+.button.on-white.coming-soon:hover {
+  background-color: #adadad;
+}
+
 .button.alt {
   border: 1px solid #6b6b6b;
   background-color: rgba(26, 169, 203, 0);
@@ -1207,23 +1216,26 @@ a {
   display: -ms-flexbox;
   display: flex;
   padding-top: 25px;
+  padding-right: 10%;
+  padding-left: 10%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   border-radius: 15px;
   background-color: #1aa9cb;
 }
 
 .image-3 {
   overflow: hidden;
-  width: 70%;
-  height: 100%;
+  width: 100%;
+  height: 200px;
+  border-radius: 9px;
   -o-object-fit: cover;
   object-fit: cover;
 }
@@ -1233,9 +1245,9 @@ a {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-right: 200px;
+  margin-right: 20%;
   margin-bottom: 30px;
-  margin-left: 200px;
+  margin-left: 20%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -1366,6 +1378,11 @@ a {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+  grid-auto-columns: 1fr;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: auto auto;
+  grid-template-rows: auto auto;
   background-color: rgba(38, 38, 41, 0.59);
 }
 
@@ -1417,8 +1434,8 @@ a {
 .grid-2 {
   margin-top: 15px;
   margin-bottom: 30px;
-  padding-right: 50px;
-  padding-left: 50px;
+  padding-right: 5vw;
+  padding-left: 5vw;
   justify-items: center;
   -webkit-box-align: center;
   -webkit-align-items: center;
@@ -1460,8 +1477,8 @@ a {
 
 .grid-3 {
   margin-top: 15px;
-  margin-right: 126px;
-  margin-left: 125px;
+  padding-right: 20vw;
+  padding-left: 20vw;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -1476,8 +1493,8 @@ a {
 }
 
 .image-7 {
-  padding-right: 120px;
-  padding-left: 120px;
+  padding-right: 15vw;
+  padding-left: 15vw;
 }
 
 .grid-4 {
@@ -1573,6 +1590,12 @@ a {
   grid-template-rows: auto;
 }
 
+.offset-fix {
+  position: absolute;
+  height: 112px;
+  margin-top: -112px;
+}
+
 @media screen and (max-width: 991px) {
   h2 {
     font-size: 34px;
@@ -1631,15 +1654,16 @@ a {
   }
 
   .menu-button.w--open {
-    background-color: #000;
+    background-color: transparent;
   }
 
   .nav-menu-2 {
     min-width: 240px;
+    margin-top: 80px;
     padding-top: 20px;
     padding-right: 20px;
     padding-left: 20px;
-    background-color: #000;
+    background-color: #003c58;
   }
 
   .brand {
@@ -1656,6 +1680,7 @@ a {
 
   .nav-box-shadow {
     width: 100vw;
+    height: 80px;
   }
 
   .old-cards {
@@ -1669,6 +1694,11 @@ a {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     -ms-grid-rows: auto auto auto auto;
     grid-template-rows: auto auto auto auto;
+  }
+
+  .team-grid {
+    -ms-grid-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   .p1-left {
@@ -1686,8 +1716,17 @@ a {
     object-fit: fill;
   }
 
+  .grid-4 {
+    grid-column-gap: 20px;
+  }
+
   .tab-link-tab-2-3 {
     margin-left: 15px;
+  }
+
+  .offset-fix {
+    height: 80px;
+    margin-top: 80px;
   }
 }
 
@@ -1698,8 +1737,15 @@ a {
   }
 
   .hero.center {
-    background-position: 0px 0px;
-    background-size: auto 90vh;
+    background-image: url('../images/Subtract-2.svg'), url('../images/Rectangle.svg');
+    background-position: 50% 101%, 0px 0px;
+    background-size: contain, auto;
+    background-repeat: no-repeat, repeat;
+    background-attachment: scroll, scroll;
+  }
+
+  .button.on-white {
+    margin-right: 0px;
   }
 
   .heading-wrap {
@@ -1730,11 +1776,38 @@ a {
   }
 
   .hero-content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     margin-bottom: 5vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .hero-subhead {
+    max-width: 80%;
+    text-align: center;
+  }
+
+  .footer {
+    padding-right: 5%;
+    padding-left: 5%;
   }
 
   .menu-icon {
     font-size: 30px;
+  }
+
+  .heading-3 {
+    text-align: center;
   }
 
   .about-cucai {
@@ -1751,6 +1824,11 @@ a {
     grid-template-rows: auto auto auto;
   }
 
+  .highlights {
+    margin-bottom: -1px;
+    background-position: 50% 100%;
+  }
+
   .card-grid {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
@@ -1759,6 +1837,11 @@ a {
   .universal-container {
     padding-right: 20px;
     padding-left: 20px;
+  }
+
+  .faq-wrapper {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 
   .text-block-7 {
@@ -1775,6 +1858,11 @@ a {
     grid-template-rows: auto auto auto;
   }
 
+  .tabs-content {
+    height: 320px;
+    margin-bottom: 24px;
+  }
+
   .tabs {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1788,16 +1876,37 @@ a {
     grid-row-gap: 1px;
   }
 
+  .team-grid {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .modals {
+    display: none;
+  }
+
   .modal-1 {
+    display: none;
     width: 95%;
   }
 
+  .grid-2 {
+    grid-column-gap: 15px;
+  }
+
   .grid-4 {
+    padding-right: 15%;
+    padding-left: 15%;
     justify-items: stretch;
     -webkit-box-align: stretch;
     -webkit-align-items: stretch;
     -ms-flex-align: stretch;
     align-items: stretch;
+    grid-row-gap: 25px;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    -ms-grid-rows: 30vh auto auto;
+    grid-template-rows: 30vh auto auto;
   }
 
   .tabs-menu-2 {
@@ -1863,6 +1972,43 @@ a {
     width: 100vw;
   }
 
+  .tabs-content {
+    width: 80%;
+    height: 450px;
+  }
+
+  .program {
+    margin-bottom: 0px;
+  }
+
+  .div-block-21 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .team-card-text {
+    width: 175px;
+    padding-left: 0px;
+  }
+
+  .team-grid {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .div-block-25 {
+    margin-right: 10%;
+    margin-bottom: 15px;
+    margin-left: 10%;
+  }
+
   .modals {
     display: none;
   }
@@ -1870,10 +2016,37 @@ a {
   .modal-1 {
     display: none;
     width: 95%;
+    padding: 10px;
   }
 
   .p3-left-reg {
     font-size: 16px;
+  }
+
+  .grid-2 {
+    padding-right: 0vw;
+    padding-left: 0vw;
+    -ms-grid-rows: 5vh 5vh;
+    grid-template-rows: 5vh 5vh;
+  }
+
+  .grid-3 {
+    padding-right: 5vw;
+    padding-left: 5vw;
+  }
+
+  .image-7 {
+    padding-right: 0vw;
+    padding-left: 0vw;
+  }
+
+  .text-block-9 {
+    margin-bottom: 15px;
+    line-height: 22px;
+  }
+
+  .div-block-29 {
+    font-size: 12px;
   }
 }
 
@@ -2157,6 +2330,17 @@ a {
     grid-column-end: 4;
     -ms-grid-column: 3;
     grid-column-start: 3;
+  }
+
+  #w-node-_8629cc26-1847-c24f-cee1-d63e618dcc83-22aeaa13 {
+    -ms-grid-column-span: 1;
+    grid-column-end: 2;
+    -ms-grid-column: 1;
+    grid-column-start: 1;
+    -ms-grid-row-span: 1;
+    grid-row-end: 2;
+    -ms-grid-row: 1;
+    grid-row-start: 1;
   }
 }
 
