@@ -431,7 +431,7 @@ a {
   padding: 20px 10px 55px;
   grid-auto-columns: 1fr;
   grid-column-gap: 30px;
-  grid-row-gap: 40px;
+  grid-row-gap: 20px;
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   -ms-grid-rows: auto auto;
@@ -1515,6 +1515,14 @@ a {
   position: absolute;
   top: 1035px;
   z-index: 1;
+}
+
+.large-highlight-card.right {
+  margin-top: 25px;
+}
+
+.large-highlight-card.left {
+  margin-top: -25px;
 }
 
 .small-highlight-card {
