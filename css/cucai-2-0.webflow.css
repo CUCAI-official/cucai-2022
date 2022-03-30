@@ -708,13 +708,19 @@ a {
   display: -ms-flexbox;
   display: flex;
   max-width: 1200px;
-  padding-top: 140px;
+  padding-top: 0px;
   padding-right: 35px;
   padding-left: 35px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+}
+
+.universal-container.schedule-button {
+  display: block;
+  max-width: 1200px;
+  padding: 140px 35px 0px;
 }
 
 .faq {
@@ -1844,6 +1850,7 @@ a {
   background-color: #1aa9cb;
   font-family: 'IBM Plex Sans', sans-serif;
   color: #fff;
+  font-weight: 700;
 }
 
 .tab-2 {
@@ -1857,6 +1864,7 @@ a {
 .tab-2.w--current {
   background-color: #1aa9cb;
   color: #fff;
+  font-weight: 700;
 }
 
 .tabs-content-2 {
