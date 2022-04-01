@@ -1582,10 +1582,10 @@ a {
   height: 14vh;
 }
 
-.grid-3 {
+.spons-1 {
   margin-top: 15px;
-  padding-right: 20vw;
-  padding-left: 20vw;
+  padding-right: 10vw;
+  padding-left: 10vw;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -1597,6 +1597,8 @@ a {
   align-items: center;
   grid-column-gap: 25px;
   grid-row-gap: 25px;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
   -ms-grid-rows: auto;
   grid-template-rows: auto;
 }
@@ -1940,6 +1942,25 @@ a {
 .speakers-copy {
   display: block;
   background-color: #fff;
+}
+
+.spons-2 {
+  margin-top: 15px;
+  padding-right: 20vw;
+  padding-left: 20vw;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  justify-items: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  grid-column-gap: 25px;
+  grid-row-gap: 25px;
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
 }
 
 @media screen and (max-width: 991px) {
@@ -2409,7 +2430,7 @@ a {
     grid-template-rows: 5vh 5vh;
   }
 
-  .grid-3 {
+  .spons-1 {
     padding-right: 5vw;
     padding-left: 5vw;
   }
@@ -2448,6 +2469,11 @@ a {
   .tab-pane {
     width: 380px;
     margin-left: 0px;
+  }
+
+  .spons-2 {
+    padding-right: 5vw;
+    padding-left: 5vw;
   }
 }
 
@@ -2639,7 +2665,7 @@ a {
   grid-row-end: span 1;
 }
 
-#w-node-d7b33ede-29cc-e4a5-5bc7-1a1a2c481cb6-22aeaa13 {
+#w-node-e92c1575-95a7-ff45-339d-fbb40b1d3db9-22aeaa13 {
   -ms-grid-column: span 1;
   grid-column-start: span 1;
   -ms-grid-column-span: 1;
@@ -2650,7 +2676,18 @@ a {
   grid-row-end: span 1;
 }
 
-#w-node-cf60c796-eed2-f558-d3c1-86cc7e73737e-22aeaa13 {
+#w-node-e92c1575-95a7-ff45-339d-fbb40b1d3dbb-22aeaa13 {
+  -ms-grid-column: span 1;
+  grid-column-start: span 1;
+  -ms-grid-column-span: 1;
+  grid-column-end: span 1;
+  -ms-grid-row: span 1;
+  grid-row-start: span 1;
+  -ms-grid-row-span: 1;
+  grid-row-end: span 1;
+}
+
+#w-node-e92c1575-95a7-ff45-339d-fbb40b1d3dbc-22aeaa13 {
   -ms-grid-column-span: 1;
   grid-column-end: 3;
   -ms-grid-column: 2;
